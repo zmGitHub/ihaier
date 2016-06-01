@@ -82,36 +82,53 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
 
     $stateProvider
 
-        // Dashboard
+        // 首页
         .state('dashboard', {
             url: "/dashboard.html",
             templateUrl: "views/dashboard.html",
-            data: {pageTitle: '首页', pageSubTitle: '小微创客'}            
+            data: {pageTitle: '首页', pageSubTitle: '小微创客'}
         })
-
+        // 查询页
+        .state('filter', {
+            url: "/filter.html",
+            templateUrl: "views/filter.html",
+            data: {pageTitle: '搜索', pageSubTitle: '小微创客'}
+        })
         // AngularJS plugins
-        .state('fileupload', {
-            url: "/file_upload.html",
-            templateUrl: "views/file_upload.html",
-            data: {pageTitle: 'AngularJS File Upload', pageSubTitle: 'angularjs file upload'},
-            controller: "GeneralPageController",
+        .state('trend', {
+            url: "/trend.html",
+            templateUrl: "views/trend.html",
+            data: {pageTitle: '融资状态', pageSubTitle: '企业融资状态'},
+            controller: "TrendController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([{
-                        name: 'angularFileUpload',
-                        files: [
-                            'assets/global/plugins/angularjs/plugins/angular-file-upload/angular-file-upload.min.js',
-                        ]
-                    }, {
                         name: 'MetronicApp',
                         files: [
-                            'js/controllers/GeneralPageController.js'
+                            'js/controllers/TrendController.js'
                         ]
                     }]);
                 }]
             }
         })
-
+        // 小微项目详情
+        // 查询页
+        .state('info', {
+            url: "/info.html",
+            templateUrl: "views/info.html",
+            data: {pageTitle: '小微公司详情', pageSubTitle: '公司详情'},
+            controller: "InfoController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([{
+                        name: 'MetronicApp',
+                        files: [
+                            'js/controllers/InfoController.js'
+                        ]
+                    }]);
+                }]
+            }
+        })
         // UI Select
         .state('uiselect', {
             url: "/ui_select.html",
