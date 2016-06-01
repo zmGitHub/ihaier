@@ -200,7 +200,7 @@ Page Header
   background: #181b1e;
 }
 .page-header .page-header-menu {
-  background: rgb(0,185,239);
+  background: rgb(0, 90, 171);
   /* Default Mega Menu */
   /* Light Mega Menu */
   /* Header seaech box */
@@ -226,7 +226,7 @@ Page Header
 }
 .page-header .page-header-menu .hor-menu .navbar-nav > li.open > a,
 .page-header .page-header-menu .hor-menu .navbar-nav > li > a:hover {
-  color: rgb(0,185,239) !important;
+  color: rgb(0, 90, 171) !important;
   background: #fff!important;
 }
 .page-header .page-header-menu .hor-menu .navbar-nav > li.open > a > i,
@@ -237,7 +237,7 @@ Page Header
 .page-header .page-header-menu .hor-menu .navbar-nav > li.active > a:hover, .page-header .page-header-menu .hor-menu .navbar-nav > li.current > a,
 .page-header .page-header-menu .hor-menu .navbar-nav > li.current > a:hover {
   color: #fff;
-  background: #0098C5;
+  background: #0677DC;
 }
 .page-header .page-header-menu .hor-menu .navbar-nav > li.active > a > i,
 .page-header .page-header-menu .hor-menu .navbar-nav > li.active > a:hover > i, .page-header .page-header-menu .hor-menu .navbar-nav > li.current > a > i,
@@ -382,19 +382,21 @@ Page Header
 Page Footer
 ******/
 .page-prefooter {
-  background: #48525e;
-  color: #a2abb7;
+  background-image: url("../../../../../assets/images/foot.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 .page-prefooter h2 {
-  color: #4db3a4;
+  color: #fff;
 }
 .page-prefooter a {
-  color: #4db3a4;
+  color: #fff;
 }
 .page-prefooter .subscribe-form .form-control {
   background: #343b44;
   border-color: #343b44;
-  color: #a2abb7;
+  color: #fff;
 }
 .page-prefooter .subscribe-form .form-control::-moz-placeholder {
   color: #939eac;
@@ -617,5 +619,5 @@ Page Footer
 ****/
 .page-spinner-bar > div,
 .block-spinner-bar > div {
-  background: #5fbbad;
+  background: rgb(0, 90, 171);
 }

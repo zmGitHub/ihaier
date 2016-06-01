@@ -66,12 +66,6 @@ MetronicApp.controller('HeaderController', ['$scope', function($scope) {
     });
 }]);
 
-/* Setup Layout Part - Sidebar */
-MetronicApp.controller('PageHeadController', ['$scope', function($scope) {
-    $scope.$on('$includeContentLoaded', function() {
-        Demo.init(); // init theme panel
-    });
-}]);
 
 /* Setup Layout Part - Footer */
 MetronicApp.controller('FooterController', ['$scope', function($scope) {
@@ -92,29 +86,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         .state('dashboard', {
             url: "/dashboard.html",
             templateUrl: "views/dashboard.html",
-            data: {pageTitle: 'Dashboard', pageSubTitle: 'statistics & reports'},
-            controller: "DashboardController",
-            resolve: {
-                deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                    return $ocLazyLoad.load({
-                        name: 'MetronicApp',
-                        insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
-                        files: [
-                            'assets/global/plugins/morris/morris.css',
-                            'assets/admin/pages/css/tasks.css',
-
-                            'assets/global/plugins/morris/morris.min.js',
-                            'assets/global/plugins/morris/raphael-min.js',
-                            'assets/global/plugins/jquery.sparkline.min.js',
-
-                            'assets/admin/pages/scripts/index3.js',
-                            'assets/admin/pages/scripts/tasks.js',
-
-                             'js/controllers/DashboardController.js'
-                        ]
-                    });
-                }]
-            }
+            data: {pageTitle: '首页', pageSubTitle: '小微创客'}            
         })
 
         // AngularJS plugins

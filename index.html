@@ -43,7 +43,7 @@
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 
-<body ng-controller="AppController" class="page-on-load">
+<body ng-controller="AppController" class="page-on-load page-header-menu-fixed">
 
     <!-- BEGIN PAGE SPINNER -->
     <div ng-spinner-bar class="page-spinner-bar">
@@ -63,20 +63,10 @@
 
     <!-- BEGIN CONTAINER -->
     <div class="page-container">
-
-        <!-- BEGIN PAGE HEAD -->
-        <div data-ng-include="'tpl/page-head.html'" data-ng-controller="PageHeadController" class="page-head">
-        </div>
-        <!-- END PAGE HEAD -->
-
         <!-- BEGIN PAGE CONTENT -->
         <div class="page-content">
-            <div class="container">
-                <!-- BEGIN ACTUAL CONTENT -->
-                <div ui-view class="fade-in-up">
-                </div>
-                <!-- END ACTUAL CONTENT -->
-            </div>
+          <div ui-view class="fade-in-up">
+          </div>
         </div>
         <!-- END PAGE CONTENT -->
 
